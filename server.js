@@ -63,7 +63,6 @@ app.post("/api/user/register", (req, res) => {
 app.post("/api/user/login", (req, res) => {
     userService.checkUser(req.body)
     .then((user) => {
-        res.json({ "message": "login successful"});
         let payload = {
             _id: user._id,
             userName: user.userName,
