@@ -66,8 +66,6 @@ app.post("/api/user/login", (req, res) => {
         let payload = {
             _id: user._id,
             userName: user.userName,
-            favourites: user.favourites,
-            history: user.history
         }
 
         let token = jwt.sign(payload, jwtOptions.secretOrKey);
